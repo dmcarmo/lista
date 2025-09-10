@@ -1,24 +1,50 @@
-# README
+# DSSB - Directório de Serviços de Saúde e Bem Estar
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+### Prerequisites
 
-* Ruby version
+- Ruby 3.4.5
+- Rails 8.0+
+- PostgreSQL
 
-* System dependencies
+### Installation
 
-* Configuration
+1. **Clone and install**
 
-* Database creation
+   ```bash
+   git clone https://github.com/dmcarmo/lista.git
+   cd lista
+   bundle install
+   ```
 
-* Database initialization
+2. **Environment setup**
 
-* How to run the test suite
+   ```bash
+   cp .env.example .env
+   # Edit .env with your credentials and other config
+   ```
 
-* Services (job queues, cache servers, search engines, etc.)
+3. **Database setup**
 
-* Deployment instructions
+   ```bash
+   rails db:create db:migrate db:seed
+   ```
 
-* ...
+4. **Start the server**
+
+   ```bash
+   bin/dev
+   ```
+
+Visit `http://localhost:3000`
+
+## Testing
+
+```bash
+rspec
+```
+
+## License
+
+MIT License
