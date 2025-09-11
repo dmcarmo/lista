@@ -1,2 +1,12 @@
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% if notice %>
+  <div class="alert alert-info" role="alert">
+    <button type="button" class="btn-close" aria-label="Close"></button>
+    <%= notice %>
+  </div>
+<% end %>
+<% if alert %>
+  <div class="alert alert-warning" role="alert">
+    <button type="button" class="btn-close" aria-label="Close"></button>
+    <%= alert %>
+  </div>
+<% end %>
